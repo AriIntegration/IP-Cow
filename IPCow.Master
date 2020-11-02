@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="IPCow.master.cs" Inherits="IP_Cow.IPCow" ViewStateMode="Disabled" %>
+﻿<%@ Master Language="C#" AutoEventWireup="True" CodeBehind="IPCow.master.cs" Inherits="IP_Cow.IPCow" ViewStateMode="Disabled" %>
 
 <!DOCTYPE html>
 
@@ -17,25 +17,20 @@
     <title>IP Cow - What is my IP Address?</title>
 </head>
 <body>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-        <div class="header">
-            <a href="/">
-                <img alt="" src="images/background.png" /></a>
-        </div>
-    </asp:ContentPlaceHolder>
-    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-    </asp:ContentPlaceHolder>
-    <asp:ContentPlaceHolder ID="footer" runat="server">
-        <div class="container">
-            <div class="row">
-                <div class="one.column" style="margin-top: 10px">
-                    <p>
-                        &copy;<asp:Label ID="lblCopyrightYear" runat="server" />
-                        <a href="https://michalferber.com/">Michal Ferber</a> | All Rights Reserved | <a href="terms.aspx">Terms of Use</a>
-                    </p>
-                </div>
+    <div class="header">
+        <a href="/">
+            <img alt="" src="images/background.png" /></a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="one.column" style="margin-top: 10px">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server" />
+                <p>
+                    &copy;2005-<asp:Literal runat="server" ID="lblYear" />
+                    <a href="https://michalferber.com/">Michal Ferber</a> | All Rights Reserved | <a href="terms.aspx">Terms of Use</a>
+                </p>
             </div>
         </div>
-    </asp:ContentPlaceHolder>
+    </div>
 </body>
 </html>

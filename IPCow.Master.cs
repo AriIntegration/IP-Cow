@@ -5,12 +5,10 @@ namespace IP_Cow
 {
     public partial class IPCow : System.Web.UI.MasterPage
     {
+        protected global::System.Web.UI.WebControls.Literal lblYear;
         protected void Page_Load(object sender, EventArgs e)
         {
-            using (Label lblCopyrightYear = new Label())
-            {
-                lblCopyrightYear.Text = DateTime.Now.Year.ToString();
-            }
+            lblYear.Text = DateTime.Now.Year.ToString();
         }
     }
 }

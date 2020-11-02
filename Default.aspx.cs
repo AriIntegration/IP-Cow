@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using System.Net.Sockets;
 using System.Web;
 using System.Web.Configuration;
 
@@ -7,30 +8,31 @@ namespace IP_Cow
 {
     public partial class Default : System.Web.UI.Page
     {
-        static String sHostName = String.Empty;
-        static String sDevice = String.Empty;
-        static String sOS = String.Empty;
+        static String sIPAddress;
+        static String sHostName;
+        static String sDevice;
+        static String sOS;
         static Boolean IsMobile;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             CheckBrowserCaps();
+            sDevice = GetComputerTypeByUserAgent(Request.UserAgent);
+            sOS = GetOSByUserAgent(Request.UserAgent);
+            sIPAddress = HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"].ToString();
             HttpBrowserCapabilities bc = Request.Browser;
 
             try
             {
-                sHostName = Dns.GetHostEntry(Request.ServerVariables["REMOTE_ADDR"]).HostName;
+                sHostName = Dns.GetHostEntry(sIPAddress).HostName;
             }
             catch
             {
-                sHostName = "NULL";
+                sHostName = "No HostName Found";
             }
 
-            sDevice = GetComputerTypeByUserAgent(Request.UserAgent);
-            sOS = GetOSByUserAgent(Request.UserAgent);
-
             lblUserAgent.Text = Request.UserAgent;
-            lblUserIP.Text = HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"];
+            lblUserIP.Text = sIPAddress;
             lbl1.Text = "Hostname = <b>" + sHostName + "</b>";
             lbl2.Text = "Device = <b>" + sDevice + "</b>";
             lbl3.Text = "Operating System = <b>" + sOS + "</b>";
