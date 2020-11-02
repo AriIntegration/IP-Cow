@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="IPCow.master.cs" Inherits="IP_Cow.IPCow" ViewStateMode="Disabled" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="description" content="Get your internet IP address and more.">
+    <meta name="keywords" content="ip, IP, address, dynamic, dhcp, change, ipaddress, ip address, network, ISP, internet, provider, providor, inet, net, localhost, local, host, look, up, look up, system, computer, windows, information, info, dns, name, what is my ip, whatismyip, find ip, find your ip address, ipaddress, address, ipconfig, whois, vpn, admin, dns, ping, network, router, ipv4, ipv6">
+    <meta name="author" content="Michal Ferber">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>IP Cow - What is my IP Address?</title>
+</head>
+<body>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <div class="header">
+            <a href="/">
+                <img alt="" src="images/background.png" /></a>
+        </div>
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="footer" runat="server">
+        <div class="container">
+            <div class="row">
+                <div class="one.column" style="margin-top: 10px">
+                    <p>
+                        &copy;<asp:Label ID="lblCopyrightYear" runat="server" />
+                        <a href="https://michalferber.com/">Michal Ferber</a> | All Rights Reserved | <a href="terms.aspx">Terms of Use</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </asp:ContentPlaceHolder>
+</body>
+</html>
