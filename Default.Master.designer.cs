@@ -7,20 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace IP_Cow
+namespace IPCow.Website
 {
 
 
-    public partial class IPCow
+    public partial class DefaultMaster
     {
 
         /// <summary>
-        /// ContentPlaceHolder control.
+        /// pageBody control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl pageBody;
+
+        /// <summary>
+        /// BodyPlaceholder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder BodyPlaceholder;
     }
 }

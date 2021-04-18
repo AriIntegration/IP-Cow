@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/IPCow.Master" AutoEventWireup="true" CodeBehind="Terms.aspx.cs" Inherits="IP_Cow.Terms" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="Terms.aspx.cs" Inherits="IPCow.Website.Terms" %>
 
-<asp:Content ID="Content" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
+<asp:Content ID="Content" ContentPlaceHolderID="BodyPlaceholder" runat="server">
     <h3>Terms of Use</h3>
     <p><b>Updated March 31, 2018</b></p>
     <p>By using IP Cow you agree to be bound by the following terms and conditions.</p>

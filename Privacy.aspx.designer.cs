@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace IP_Cow
+namespace IPCow.Website
 {
 
 

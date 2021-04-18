@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace IP_Cow
+namespace IPCow.Website
 {
     public partial class Privacy : System.Web.UI.Page
     {

@@ -1,17 +1,7 @@
-﻿using System.Reflection;
+﻿using System.Resources;
+using System;
+using System.Reflection;
 using System.Runtime.InteropServices;
-
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-[assembly: AssemblyTitle("IPCow.com")]
-[assembly: AssemblyDescription("Get your internet IP address and more.")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Ari Integration LLC")]
-[assembly: AssemblyProduct("IPCow.com")]
-[assembly: AssemblyCopyright("Copyright ©  2005-2020")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
@@ -30,5 +20,20 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("2020.11.02.0010")]
-[assembly: AssemblyFileVersion("2020.11.02.0010")]
+[assembly: AssemblyVersion("2021.04.17.0011")]
+[assembly: AssemblyFileVersion("2021.04.17.0011")]
+
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+[assembly: AssemblyTitle("IPCow.com")]
+[assembly: AssemblyDescription("Get your internet IP address and more.")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("Ari Integration LLC")]
+[assembly: AssemblyProduct("IPCow.com")]
+[assembly: AssemblyCopyright("Copyright ©  2005-2021")]
+[assembly: AssemblyTrademark("")]
+[assembly: CLSCompliant(true)]
+[assembly: NeutralResourcesLanguage("en")]
+
+namespace IPCow.Website { }

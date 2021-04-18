@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/IPCow.Master" AutoEventWireup="true" CodeBehind="Privacy.aspx.cs" Inherits="IP_Cow.Privacy" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="Privacy.aspx.cs" Inherits="IPCow.Website.Privacy" %>
 
-<asp:Content ID="Content" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
+<asp:Content ID="Content" ContentPlaceHolderID="BodyPlaceholder" runat="server">
     <h3>Privacy Statement</h3>
     <p><b>Updated March 31, 2018</b></p>
     <p>IP Cow strives hard to make sure that your privacy is held in the highest regard. We make sure to continually update this policy as IP Cow grows and expands so that it will always be up to date and let you know what we do or do not do with your information.</p>

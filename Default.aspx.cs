@@ -2,76 +2,55 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Web;
-using System.Web.Configuration;
+using UAParser;
+using DnsClient;
 
-namespace IP_Cow
+namespace IPCow.Website
 {
     public partial class Default : System.Web.UI.Page
     {
-        static String sIPAddress;
-        static String sHostName;
-        static String sDevice;
-        static String sOS;
-        static Boolean IsMobile;
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            CheckBrowserCaps();
-            sDevice = GetComputerTypeByUserAgent(Request.UserAgent);
-            sOS = GetOSByUserAgent(Request.UserAgent);
-            sIPAddress = HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"].ToString();
+            BuildPage();
+        }
+
+        private void BuildPage()
+        {
+            string uaString = Request.UserAgent;
+
+            string sIPAddress = HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"].ToString();
             HttpBrowserCapabilities bc = Request.Browser;
 
+            var uaParser = Parser.GetDefault();
+            ClientInfo c = uaParser.Parse(uaString);
+
+            var client = new LookupClient(NameServer.GooglePublicDns, NameServer.GooglePublicDnsIPv6);
+            string sHostName;
             try
             {
-                sHostName = Dns.GetHostEntry(sIPAddress).HostName;
+                sHostName = client.GetHostName(IPAddress.Parse(sIPAddress));
             }
-            catch
+            catch (DnsClient.DnsResponseException ex)
             {
-                sHostName = "No HostName Found";
+                sHostName = ex.Message;
             }
 
-            lblUserAgent.Text = Request.UserAgent;
             lblUserIP.Text = sIPAddress;
-            lbl1.Text = "Hostname = <b>" + sHostName + "</b>";
-            lbl2.Text = "Device = <b>" + sDevice + "</b>";
-            lbl3.Text = "Operating System = <b>" + sOS + "</b>";
-            lbl4.Text = "Browser Name = <b>" + bc.Browser + "</b>";
-            lbl5.Text = "Browser Version = <b>" + bc.Version + "</b>";
-            lbl6.Text = "Is Mobile Device = <b>" + IsMobile + "</b>";
-            lbl7.Text = "Is Beta = <b>" + bc.Beta + "</b>";
-            lbl8.Text = "Screen Resolution = <b><scr" + "ipt>document.write(screen.width)</scr" + "ipt> x <scr" + "ipt>document.write(screen.height)</scr" + "ipt></b>";
-        }
-        void CheckBrowserCaps()
-        {
-            HttpBrowserCapabilities myBrowserCaps = Request.Browser;
-            IsMobile = ((HttpCapabilitiesBase)myBrowserCaps).IsMobileDevice;
-        }
-        public static string GetOSByUserAgent(string userAgent)
-        {
-            string os;
-            char[] delimiterChars = { '(', ')', ';', ':' };
-            string s = userAgent;
-            string[] values = s.Split(delimiterChars);
+            lblUserAgent.Text = uaString;
+            lblInfo.Text += "Hostname &#61; <strong>" + sHostName + "</strong><br />";
+            lblInfo.Text += "Device &#61; <strong>" + c.Device.ToString() + "</strong><br />";
+            lblInfo.Text += "Operating System &#61; <strong>" + c.OS.ToString() + "</strong><br />";
+            lblInfo.Text += "Browser &#61; <strong>" + c.UA.ToString() + "</strong><br />";
+            lblInfo.Text += "ECMAScript &#61; <strong>" + bc.EcmaScriptVersion + "</strong><br />";
+            lblInfo.Text += "Cookies &#61; <strong>" + bc.Cookies + "</strong><br />";
+            lblInfo.Text += "Is Mobile Device &#61; <strong>" + bc.IsMobileDevice + "</strong><br />";
+            if (bc.IsMobileDevice)
+                lblInfo.Text += "Mobile Device &#61; <strong>" + bc.MobileDeviceManufacturer + " " + bc.MobileDeviceModel + "</strong><br />";
+            lblInfo.Text += "Is Beta &#61; <strong>" + bc.Beta + "</strong><br />";
+            lblInfo.Text += "Is Spider &#61; <strong>" + c.Device.IsSpider + "</strong><br />";
 
-            os = values[2].Replace('_', '.').Replace("Intel ", "").Replace("CrOS ", "Chrome OS ");
-
-            if (sDevice == "PC") os = values[1];
-
-            return os;
-        }
-        public static string GetComputerTypeByUserAgent(string userAgent)
-        {
-            string os;
-            char[] delimiterChars = { '(', ')', ';', ':' };
-            string s = userAgent;
-            string[] values = s.Split(delimiterChars);
-
-            os = values[1];
-
-            if (os.Contains("Windows") == true) os = "PC";
-
-            return os;
+            DefaultMaster.pageBodyKey = "onload";
+            DefaultMaster.pageBodyValue = "getScreenSize()";
         }
     }
 }
