@@ -9,3 +9,7 @@
 .header {
     overflow: hidden;
 }
+
+iframe {
+    border: none;
+}

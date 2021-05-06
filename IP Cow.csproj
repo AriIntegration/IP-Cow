@@ -35,6 +35,8 @@
     <LegacyPublishPropertiesPageEnabled>true</LegacyPublishPropertiesPageEnabled>
     <IncludeIisSettings>false</IncludeIisSettings>
     <PublishDatabases>false</PublishDatabases>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -84,6 +86,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\custom.css" />
+    <Content Include="css\jqm-demos.css" />
+    <Content Include="css\jquery.mobile-1.4.5.min.css" />
     <Content Include="css\normalize.css" />
     <Content Include="css\skeleton.css" />
     <Content Include="Default.aspx" />
@@ -99,6 +103,13 @@
     <Content Include="images\favicon.ico" />
     <Content Include="images\favicon.png" />
     <Content Include="images\original.jpg" />
+    <Content Include="js\get-screen-size.js" />
+    <Content Include="js\index.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.mobile-1.4.5.js" />
+    <Content Include="js\jquery.mobile-1.4.5.min.js" />
+    <Content Include="js\popup-iframe-video.js" />
     <Content Include="phpinfo.php" />
     <Content Include="Privacy.aspx" />
     <Content Include="robots.txt" />
@@ -151,6 +162,7 @@
     <Content Include="Default.Master" />
     <Content Include="ipcow.pfx" />
     <Content Include="perlinfo.pl" />
+    <Content Include="js\jquery.mobile-1.4.5.min.map" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\_Published.pubxml" />
     <None Include="Properties\Settings.settings">

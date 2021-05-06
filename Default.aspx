@@ -5,11 +5,15 @@
         <tbody>
             <tr>
                 <td>
-                    <h2><asp:Literal ID="lblUserIP" runat="server" /></h2></td>
+                    <h2>
+                        <asp:Literal ID="lblUserIP" runat="server" /></h2>
+                </td>
             </tr>
             <tr>
                 <td>
-                    <h5><asp:Literal ID="lblUserAgent" runat="server" /></h5></td>
+                    <h5>
+                        <asp:Literal ID="lblUserAgent" runat="server" /></h5>
+                </td>
             </tr>
             <tr>
                 <td>
@@ -19,13 +23,14 @@
                     </h6>
                 </td>
             </tr>
+<%--            <tr>
+                <td>
+                    <a href="#popupVideo" data-rel="popup" data-position-to="window">Perform Speedtest</a>
+<div data-role="popup" id="popupVideo" data-overlay-theme="b" data-theme="a" data-tolerance="15,15" class="ui-content">
+    <iframe src="https://ipcow.dualstack.speedtestcustom.com/" width="497" height="298" seamless=""></iframe>
+</div>
+                </td>
+            </tr>--%>
         </tbody>
     </table>
-<script>
-function getScreenSize() {
-    var x = 'Screen Size &#61; <strong>' + screen.width + ' x ' + screen.height + '</strong><br />';
-    var y = 'Browser Size &#61; <strong>' + window.innerWidth + ' x ' + window.innerHeight + '</strong>';
-    document.getElementById("ScreenSize").innerHTML = x + y;
-}
-</script>
 </asp:Content>
