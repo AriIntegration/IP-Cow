@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Net;
-using System.Net.Sockets;
 using System.Web;
 using UAParser;
-using DnsClient;
 
 namespace IPCow.Website
 {
@@ -11,26 +9,22 @@ namespace IPCow.Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            BuildPage();
+            if (!IsPostBack)
+                BuildPage();
         }
 
         private void BuildPage()
         {
+            string sIPAddress = IPnetworking.GetIP4Address();
             string uaString = Request.UserAgent;
-
-            string sIPAddress = HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"].ToString();
             HttpBrowserCapabilities bc = Request.Browser;
 
-            var uaParser = Parser.GetDefault();
-            ClientInfo c = uaParser.Parse(uaString);
-
-            var client = new LookupClient(NameServer.GooglePublicDns, NameServer.GooglePublicDnsIPv6);
             string sHostName;
             try
             {
-                sHostName = client.GetHostName(IPAddress.Parse(sIPAddress));
+                sHostName = Dns.GetHostEntry(IPAddress.Parse(sIPAddress)).HostName.ToString();
             }
-            catch (DnsClient.DnsResponseException ex)
+            catch (Exception ex)
             {
                 sHostName = ex.Message;
             }
@@ -38,19 +32,27 @@ namespace IPCow.Website
             lblUserIP.Text = sIPAddress;
             lblUserAgent.Text = uaString;
             lblInfo.Text += "Hostname &#61; <strong>" + sHostName + "</strong><br />";
-            lblInfo.Text += "Device &#61; <strong>" + c.Device.ToString() + "</strong><br />";
-            lblInfo.Text += "Operating System &#61; <strong>" + c.OS.ToString() + "</strong><br />";
-            lblInfo.Text += "Browser &#61; <strong>" + c.UA.ToString() + "</strong><br />";
-            lblInfo.Text += "ECMAScript &#61; <strong>" + bc.EcmaScriptVersion + "</strong><br />";
-            lblInfo.Text += "Cookies &#61; <strong>" + bc.Cookies + "</strong><br />";
-            lblInfo.Text += "Is Mobile Device &#61; <strong>" + bc.IsMobileDevice + "</strong><br />";
-            if (bc.IsMobileDevice)
-                lblInfo.Text += "Mobile Device &#61; <strong>" + bc.MobileDeviceManufacturer + " " + bc.MobileDeviceModel + "</strong><br />";
-            lblInfo.Text += "Is Beta &#61; <strong>" + bc.Beta + "</strong><br />";
-            lblInfo.Text += "Is Spider &#61; <strong>" + c.Device.IsSpider + "</strong><br />";
 
-            DefaultMaster.pageBodyKey = "onload";
-            DefaultMaster.pageBodyValue = "getScreenSize()";
+            try
+            {
+                var uaParser = Parser.GetDefault();
+                ClientInfo c = uaParser.Parse(uaString);
+
+                lblInfo.Text += "Device &#61; <strong>" + c.Device.ToString() + "</strong><br />";
+                lblInfo.Text += "Operating System &#61; <strong>" + c.OS.ToString() + "</strong><br />";
+                lblInfo.Text += "Web Browser &#61; <strong>" + c.UA.ToString() + "</strong><br />";
+                lblInfo.Text += "Is this a robot or spider &#61; <strong>" + c.Device.IsSpider + "</strong><br />";
+            }
+            catch (Exception ex)
+            {
+                lblInfo.Text += ex.Message;
+            }
+
+            lblInfo.Text += "Is this a mobile device &#61; <strong>" + bc.IsMobileDevice + "</strong><br />";
+            if (bc.IsMobileDevice)
+                lblInfo.Text += "Mobile device information &#61; <strong>" + bc.MobileDeviceManufacturer + " " + bc.MobileDeviceModel + "</strong><br />";
+            lblInfo.Text += "Is this web browser a beta version &#61; <strong>" + bc.Beta + "</strong><br />";
+            lblInfo.Text += "Cookies are enabled &#61; <strong>" + bc.Cookies + "</strong><br />";
         }
     }
 }

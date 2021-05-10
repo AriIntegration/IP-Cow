@@ -28,15 +28,17 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
     <LegacyPublishPropertiesPageEnabled>true</LegacyPublishPropertiesPageEnabled>
     <IncludeIisSettings>false</IncludeIisSettings>
     <PublishDatabases>false</PublishDatabases>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
     <RunCodeAnalysis>true</RunCodeAnalysis>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -53,16 +55,7 @@
     <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DnsClient, Version=1.4.0.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
-      <HintPath>packages\DnsClient.1.4.0\lib\net471\DnsClient.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -85,9 +78,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BrowserCaps.aspx" />
+    <Content Include="Cookies.aspx" />
     <Content Include="css\custom.css" />
-    <Content Include="css\jqm-demos.css" />
-    <Content Include="css\jquery.mobile-1.4.5.min.css" />
     <Content Include="css\normalize.css" />
     <Content Include="css\skeleton.css" />
     <Content Include="Default.aspx" />
@@ -103,13 +96,7 @@
     <Content Include="images\favicon.ico" />
     <Content Include="images\favicon.png" />
     <Content Include="images\original.jpg" />
-    <Content Include="js\get-screen-size.js" />
-    <Content Include="js\index.js" />
-    <Content Include="js\jquery.js" />
-    <Content Include="js\jquery.min.js" />
-    <Content Include="js\jquery.mobile-1.4.5.js" />
-    <Content Include="js\jquery.mobile-1.4.5.min.js" />
-    <Content Include="js\popup-iframe-video.js" />
+    <Content Include="js\ipcow.js" />
     <Content Include="phpinfo.php" />
     <Content Include="Privacy.aspx" />
     <Content Include="robots.txt" />
@@ -118,6 +105,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BrowserCaps.aspx.cs">
+      <DependentUpon>BrowserCaps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BrowserCaps.aspx.designer.cs">
+      <DependentUpon>BrowserCaps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cookies.aspx.cs">
+      <DependentUpon>Cookies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cookies.aspx.designer.cs">
+      <DependentUpon>Cookies.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -132,6 +133,7 @@
     <Compile Include="Default.Master.designer.cs">
       <DependentUpon>Default.Master</DependentUpon>
     </Compile>
+    <Compile Include="IPnetworking.cs" />
     <Compile Include="Privacy.aspx.cs">
       <DependentUpon>Privacy.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -162,7 +164,6 @@
     <Content Include="Default.Master" />
     <Content Include="ipcow.pfx" />
     <Content Include="perlinfo.pl" />
-    <Content Include="js\jquery.mobile-1.4.5.min.map" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\_Published.pubxml" />
     <None Include="Properties\Settings.settings">
@@ -176,11 +177,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-    <Folder Include="WebControls\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -224,13 +221,6 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
-  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
