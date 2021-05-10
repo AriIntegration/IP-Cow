@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><% Response.Write(currentURL);%> - 501 Error</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="https://<% Response.Write(currentURL);%>/ErrorPages/style.css" />
+    <link type="text/css" rel="stylesheet" href="//<% Response.Write(currentURL);%>/ErrorPages/style.css" />
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -26,9 +26,9 @@
             <div class="notfound-404">
                 <h1>Oops!</h1>
             </div>
-            <h2>501 - Error</h2>
+            <h2>501 - Not Implemented</h2>
             <p>The server does not support the functionality required to fulfill the request.</p>
-            <a href="http://<% Response.Write(currentURL);%>">Go To Homepage</a>
+            <a href="//<% Response.Write(currentURL);%>">Go To Homepage</a>
         </div>
     </div>
 </body>

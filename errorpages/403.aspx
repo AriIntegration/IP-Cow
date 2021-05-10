@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><% Response.Write(currentURL);%> - 404 Error</title>
+    <title><% Response.Write(currentURL);%> - 403 Error</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="//<% Response.Write(currentURL);%>/ErrorPages/style.css" />
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -26,7 +26,7 @@
             <div class="notfound-404">
                 <h1>Oops!</h1>
             </div>
-            <h2>404 - Not Found</h2>
+            <h2>403 - Forbidden</h2>
             <p>The page you are looking for might have been removed, had its name changed or is temporarily unavailable.</p>
             <a href="//<% Response.Write(currentURL);%>">Go To Homepage</a>
         </div>

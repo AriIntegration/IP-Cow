@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><% Response.Write(currentURL);%> - 500 Error</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="https://<% Response.Write(currentURL);%>/ErrorPages/style.css" />
+    <link type="text/css" rel="stylesheet" href="//<% Response.Write(currentURL);%>/ErrorPages/style.css" />
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -26,9 +26,9 @@
             <div class="notfound-404">
                 <h1>Oops!</h1>
             </div>
-            <h2>500 - Error</h2>
+            <h2>500 - Internal Server Error</h2>
             <p>The server encountered an unexpected condition that prevented it from fulfilling the request.</p>
-            <a href="http://<% Response.Write(currentURL);%>">Go To Homepage</a>
+            <a href="//<% Response.Write(currentURL);%>">Go To Homepage</a>
         </div>
     </div>
 </body>

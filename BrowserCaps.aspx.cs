@@ -2,11 +2,10 @@
 
 namespace IPCow.Website
 {
-    public partial class Privacy : System.Web.UI.Page
+    public partial class BrowserCaps : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.Page.Title = "IP Cow [Privacy Policy]";
         }
     }
 }

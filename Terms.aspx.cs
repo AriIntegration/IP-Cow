@@ -6,7 +6,7 @@ namespace IPCow.Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            this.Page.Title = "IP Cow [Terms of Use]";
         }
     }
 }
