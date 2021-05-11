@@ -57,7 +57,7 @@
     </div>
     <div style="padding: 10px; margin-top: 50px; text-align: center;">
         <h2>IIS Server Variables</h2>
-        <form id="form1" runat="server">
+        <form id="frmIISServerVariables" runat="server">
             <asp:Literal ID="OutputLabel" runat="server"></asp:Literal>
         </form>
     </div>

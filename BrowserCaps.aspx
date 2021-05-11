@@ -1287,7 +1287,7 @@
     <div style="padding: 10px; margin-top: 50px; text-align: center;">
         <h2>Web Browser Capabilities</h2>
         <p>This web browser has the following capabilities:</p>
-        <form id="form2" runat="server">
+        <form id="frmBrowserCaps" runat="server">
             <asp:Literal ID="OutputLabel" runat="server"></asp:Literal>
         </form>
     </div>

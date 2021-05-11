@@ -30,14 +30,13 @@
         <h1><a href="/">
             <img alt="IP Cow" src="images/background.jpg" srcset="images/background.jpg 1920w, images/background-small.jpg 602w" height="202" width="1920" /></a></h1>
     </div>
-    <div style="padding:50px;">
+    <div style="padding: 50px; margin-top: 10px; text-align: center;">
         <h2>PHP Information</h2>
         <?php phpinfo(); ?>
     </div>
     <div class="container">
         <div class="row">
             <div class="twelve column" style="margin-top: 10px; text-align: center;">
-                <table class="u-full-width">
                 <p>
                     &copy;2005-2021
                     All Rights Reserved<br />
