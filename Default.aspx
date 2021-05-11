@@ -57,6 +57,8 @@
                                     <br />
                                     <a href="phpinfo.php">PHP Information</a>
                                     <br />
+                                    <a href="browsercaps.aspx">Web Browser Capabilities</a>
+                                    <br />
                                     <a href="//www.w3schools.com/" target="_blank">W3Schools</a>
                                 </h6>
                             </td>

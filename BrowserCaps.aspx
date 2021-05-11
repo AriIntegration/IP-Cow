@@ -1,7 +1,5 @@
 ﻿<%@ Page Language="C#" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <script runat="server">
     System.Web.HttpBrowserCapabilities bCaps;
 
@@ -14,339 +12,342 @@
     String TestCaps()
     {
         StringBuilder sb = new StringBuilder();
+        sb.AppendLine("<table width='80%' align='center'>");
         //</Snippet2>
         //<Snippet100>
-        sb.AppendLine(TestActiveXControls());
+        sb.AppendLine("<tr><td>" + TestActiveXControls() + "</td></tr>");
         //</Snippet100>
         //<Snippet101>
-        sb.AppendLine(TestAdapters());
+        sb.AppendLine("<tr><td>" + TestAdapters() + "</td></tr>");
         //</Snippet101>
         //<Snippet102>
-        sb.AppendLine(TestAOL());
+        sb.AppendLine("<tr><td>" + TestAOL() + "</td></tr>");
         //</Snippet102>
         //<Snippet103>
-        sb.AppendLine(TestBackgroundSounds());
+        sb.AppendLine("<tr><td>" + TestBackgroundSounds() + "</td></tr>");
         //</Snippet103>
         //<Snippet104>
-        sb.AppendLine(TestBeta());
+        sb.AppendLine("<tr><td>" + TestBeta() + "</td></tr>");
         //</Snippet104>
         //<Snippet105>
-        sb.AppendLine(TestBrowser());
+        sb.AppendLine("<tr><td>" + TestBrowser() + "</td></tr>");
         //</Snippet105>
         //<Snippet106>
-        sb.AppendLine(TestBrowserID());
+        sb.AppendLine("<tr><td>" + TestBrowserID() + "</td></tr>");
         //</Snippet106>
         //<Snippet107>
-        sb.AppendLine(TestBrowsers());
+        sb.AppendLine("<tr><td>" + TestBrowsers() + "</td></tr>");
         //</Snippet107>
         //<Snippet108>
-        sb.AppendLine(TestCanCall());
+        sb.AppendLine("<tr><td>" + TestCanCall() + "</td></tr>");
         //</Snippet108>
         //<Snippet109>
-        sb.AppendLine(TestCanRenderAfter());
+        sb.AppendLine("<tr><td>" + TestCanRenderAfter() + "</td></tr>");
         //</Snippet109>
         //<Snippet110>
-        sb.AppendLine(TestCanRenderEmpty());
+        sb.AppendLine("<tr><td>" + TestCanRenderEmpty() + "</td></tr>");
         //</Snippet110>
         //<Snippet111>
-        sb.AppendLine(TestCanRenderInputSelectTogether());
+        sb.AppendLine("<tr><td>" + TestCanRenderInputSelectTogether() + "</td></tr>");
         //</Snippet111>
         //<Snippet112>
-        sb.AppendLine(TestCanRenderMixedSelects());
+        sb.AppendLine("<tr><td>" + TestCanRenderMixedSelects() + "</td></tr>");
         //</Snippet112>
         //<Snippet113>
-        sb.AppendLine(TestCanRenderOneventPrevTogether());
+        sb.AppendLine("<tr><td>" + TestCanRenderOneventPrevTogether() + "</td></tr>");
         //</Snippet113>
         //<Snippet114>
-        sb.AppendLine(TestCanRenderPostBackCards());
+        sb.AppendLine("<tr><td>" + TestCanRenderPostBackCards() + "</td></tr>");
         //</Snippet114>
         //<Snippet115>
-        sb.AppendLine(TestCanRenderSetvar());
+        sb.AppendLine("<tr><td>" + TestCanRenderSetvar() + "</td></tr>");
         //</Snippet115>
         //<Snippet116>
-        sb.AppendLine(TestCanSendMail());
+        sb.AppendLine("<tr><td>" + TestCanSendMail() + "</td></tr>");
         //</Snippet116>
         //<Snippet117>
-        sb.AppendLine(TestCDF());
+        sb.AppendLine("<tr><td>" + TestCDF() + "</td></tr>");
         //</Snippet117>
         //<Snippet118>
-        sb.AppendLine(TestCLRVersion());
+        sb.AppendLine("<tr><td>" + TestCLRVersion() + "</td></tr>");
         //</Snippet118>
         //<Snippet119>
-        sb.AppendLine(TestCombineDeck());
+        sb.AppendLine("<tr><td>" + TestCombineDeck() + "</td></tr>");
         //</Snippet119>
         //<Snippet120>
-        sb.AppendLine(TestDefaultSubmitButton());
+        sb.AppendLine("<tr><td>" + TestDefaultSubmitButton() + "</td></tr>");
         //</Snippet120>
         //<Snippet121>
-        sb.AppendLine(TestECMAScriptVersion());
+        sb.AppendLine("<tr><td>" + TestECMAScriptVersion() + "</td></tr>");
         //</Snippet121>
         //<Snippet123>
-        sb.AppendLine(TestGatewayMajorVersion());
+        sb.AppendLine("<tr><td>" + TestGatewayMajorVersion() + "</td></tr>");
         //</Snippet123>
         //<Snippet124>
-        sb.AppendLine(TestGatewayMinorVersion());
+        sb.AppendLine("<tr><td>" + TestGatewayMinorVersion() + "</td></tr>");
         //</Snippet124>
         //<Snippet125>
-        sb.AppendLine(TestGatewayVersion());
+        sb.AppendLine("<tr><td>" + TestGatewayVersion() + "</td></tr>");
         //</Snippet125>
         //<Snippet126>
-        sb.AppendLine(TestHasBackButton());
+        sb.AppendLine("<tr><td>" + TestHasBackButton() + "</td></tr>");
         //</Snippet126>
         //<Snippet127>
-        sb.AppendLine(TestHideRtAlignScrollBars());
+        sb.AppendLine("<tr><td>" + TestHideRtAlignScrollBars() + "</td></tr>");
         //</Snippet127>
         //<Snippet128>
-        sb.AppendLine(TestInputType());
+        sb.AppendLine("<tr><td>" + TestInputType() + "</td></tr>");
         //</Snippet128>
         //<Snippet129>
-        sb.AppendLine(TestIsBrowser());
+        sb.AppendLine("<tr><td>" + TestIsBrowser() + "</td></tr>");
         //</Snippet129>
         //<Snippet130>
-        sb.AppendLine(TestIsColor());
+        sb.AppendLine("<tr><td>" + TestIsColor() + "</td></tr>");
         //</Snippet130>
         //<Snippet131>
-        sb.AppendLine(TestIsCrawler());
+        sb.AppendLine("<tr><td>" + TestIsCrawler() + "</td></tr>");
         //</Snippet131>
         //<Snippet132>
-        sb.AppendLine(TestIsMobileDevice());
+        sb.AppendLine("<tr><td>" + TestIsMobileDevice() + "</td></tr>");
         //</Snippet132>
         //<Snippet133>
-        sb.AppendLine(TestJavaScript());
+        sb.AppendLine("<tr><td>" + TestJavaScript() + "</td></tr>");
         //</Snippet133>
         //<Snippet134>
-        sb.AppendLine(TestJScriptVersion());
+        sb.AppendLine("<tr><td>" + TestJScriptVersion() + "</td></tr>");
         //</Snippet134>
         //<Snippet135>
-        sb.AppendLine(TestMajorVersion());
+        sb.AppendLine("<tr><td>" + TestMajorVersion() + "</td></tr>");
         //</Snippet135>
         //<Snippet136>
-        sb.AppendLine(TestMaximumHrefLength());
+        sb.AppendLine("<tr><td>" + TestMaximumHrefLength() + "</td></tr>");
         //</Snippet136>
         //<Snippet137>
-        sb.AppendLine(TestMaximumRenderedPageSize());
+        sb.AppendLine("<tr><td>" + TestMaximumRenderedPageSize() + "</td></tr>");
         //</Snippet137>
         //<Snippet138>
-        sb.AppendLine(TestMaximumSoftkeyLabelLength());
+        sb.AppendLine("<tr><td>" + TestMaximumSoftkeyLabelLength() + "</td></tr>");
         //</Snippet138>
         //<Snippet139>
-        sb.AppendLine(TestMinorVersion());
+        sb.AppendLine("<tr><td>" + TestMinorVersion() + "</td></tr>");
         //</Snippet139>
         //<Snippet140>
-        sb.AppendLine(TestMinorVersionString());
+        sb.AppendLine("<tr><td>" + TestMinorVersionString() + "</td></tr>");
         //</Snippet140>
         //<Snippet141>
-        sb.AppendLine(TestMobileDeviceManufacturer());
+        sb.AppendLine("<tr><td>" + TestMobileDeviceManufacturer() + "</td></tr>");
         //</Snippet141>
         //<Snippet142>
-        sb.AppendLine(TestMobileDeviceModel());
+        sb.AppendLine("<tr><td>" + TestMobileDeviceModel() + "</td></tr>");
         //</Snippet142>
         //<Snippet143>
-        sb.AppendLine(TestMSDomVersion());
+        sb.AppendLine("<tr><td>" + TestMSDomVersion() + "</td></tr>");
         //</Snippet143>
         //<Snippet144>
-        sb.AppendLine(TestNumberOfSoftKeys());
+        sb.AppendLine("<tr><td>" + TestNumberOfSoftKeys() + "</td></tr>");
         //</Snippet144>
         //<Snippet145>
-        sb.AppendLine(TestPlatform());
+        sb.AppendLine("<tr><td>" + TestPlatform() + "</td></tr>");
         //</Snippet145>
         //<Snippet146>
-        sb.AppendLine(TestPreferredImageMime());
+        sb.AppendLine("<tr><td>" + TestPreferredImageMime() + "</td></tr>");
         //</Snippet146>
         //<Snippet147>
-        sb.AppendLine(TestPreferredRenderingMime());
+        sb.AppendLine("<tr><td>" + TestPreferredRenderingMime() + "</td></tr>");
         //</Snippet147>
         //<Snippet148>
-        sb.AppendLine(TestPreferredRenderingType());
+        sb.AppendLine("<tr><td>" + TestPreferredRenderingType() + "</td></tr>");
         //</Snippet148>
         //<Snippet149>
-        sb.AppendLine(TestPreferredRequestEncoding());
+        sb.AppendLine("<tr><td>" + TestPreferredRequestEncoding() + "</td></tr>");
         //</Snippet149>
         //<Snippet150>
-        sb.AppendLine(TestPreferredResponseEncoding());
+        sb.AppendLine("<tr><td>" + TestPreferredResponseEncoding() + "</td></tr>");
         //</Snippet150>
         //<Snippet151>
-        sb.AppendLine(TestRenderBreakBeforeWmlSelectAndInput());
+        sb.AppendLine("<tr><td>" + TestRenderBreakBeforeWmlSelectAndInput() + "</td></tr>");
         //</Snippet151>
         //<Snippet152>
-        sb.AppendLine(TestRendersBreaksAfterHtmlLists());
+        sb.AppendLine("<tr><td>" + TestRendersBreaksAfterHtmlLists() + "</td></tr>");
         //</Snippet152>
         //<Snippet153>
-        sb.AppendLine(TestRendersBreaksAfterWmlAnchor());
+        sb.AppendLine("<tr><td>" + TestRendersBreaksAfterWmlAnchor() + "</td></tr>");
         //</Snippet153>
         //<Snippet154>
-        sb.AppendLine(TestRendersBreaksAfterWmlInput());
+        sb.AppendLine("<tr><td>" + TestRendersBreaksAfterWmlInput() + "</td></tr>");
         //</Snippet154>
         //<Snippet155>
-        sb.AppendLine(TestRendersWmlDoAcceptsInline());
+        sb.AppendLine("<tr><td>" + TestRendersWmlDoAcceptsInline() + "</td></tr>");
         //</Snippet155>
         //<Snippet157>
-        sb.AppendLine(TestRendersWmlSelectsAsMenuCards());
+        sb.AppendLine("<tr><td>" + TestRendersWmlSelectsAsMenuCards() + "</td></tr>");
         //</Snippet157>
         //<Snippet158>
-        sb.AppendLine(TestRequiredMetaTagNameValue());
+        sb.AppendLine("<tr><td>" + TestRequiredMetaTagNameValue() + "</td></tr>");
         //</Snippet158>
         //<Snippet159>
-        sb.AppendLine(TestRequiresAttributeColonSubstitution());
+        sb.AppendLine("<tr><td>" + TestRequiresAttributeColonSubstitution() + "</td></tr>");
         //</Snippet159>
         //<Snippet160>
-        sb.AppendLine(TestRequiresContentTypeMetaTag());
+        sb.AppendLine("<tr><td>" + TestRequiresContentTypeMetaTag() + "</td></tr>");
         //</Snippet160>
         //<Snippet161>
-        sb.AppendLine(TestRequiresControlStateInSession());
+        sb.AppendLine("<tr><td>" + TestRequiresControlStateInSession() + "</td></tr>");
         //</Snippet161>
         //<Snippet162>
-        sb.AppendLine(TestRequiresDBCSCharacter());
+        sb.AppendLine("<tr><td>" + TestRequiresDBCSCharacter() + "</td></tr>");
         //</Snippet162>
         //<Snippet163>
-        sb.AppendLine(TestRequiresHtmlAdaptiveErrorReporting());
+        sb.AppendLine("<tr><td>" + TestRequiresHtmlAdaptiveErrorReporting() + "</td></tr>");
         //</Snippet163>
         //<Snippet164>
-        sb.AppendLine(TestRequiresLeadingPageBreak());
+        sb.AppendLine("<tr><td>" + TestRequiresLeadingPageBreak() + "</td></tr>");
         //</Snippet164>
         //<Snippet165>
-        sb.AppendLine(TestRequiresNoBreakInFormatting());
+        sb.AppendLine("<tr><td>" + TestRequiresNoBreakInFormatting() + "</td></tr>");
         //</Snippet165>
         //<Snippet166>
-        sb.AppendLine(TestRequiresOutputOptimization());
+        sb.AppendLine("<tr><td>" + TestRequiresOutputOptimization() + "</td></tr>");
         //</Snippet166>
         //<Snippet167>
-        sb.AppendLine(TestRequiresPhoneNumberAsPlainText());
+        sb.AppendLine("<tr><td>" + TestRequiresPhoneNumberAsPlainText() + "</td></tr>");
         //</Snippet167>
         //<Snippet168>
-        sb.AppendLine(TestRequiresSpecialViewStateEncoding());
+        sb.AppendLine("<tr><td>" + TestRequiresSpecialViewStateEncoding() + "</td></tr>");
         //</Snippet168>
         //<Snippet169>
-        sb.AppendLine(TestRequiresUniqueFilePathSuffix());
+        sb.AppendLine("<tr><td>" + TestRequiresUniqueFilePathSuffix() + "</td></tr>");
         //</Snippet169>
         //<Snippet170>
-        sb.AppendLine(TestRequiresUniqueHtmlCheckboxNames());
+        sb.AppendLine("<tr><td>" + TestRequiresUniqueHtmlCheckboxNames() + "</td></tr>");
         //</Snippet170>
         //<Snippet171>
-        sb.AppendLine(TestRequiresUniqueHtmlInputNames());
+        sb.AppendLine("<tr><td>" + TestRequiresUniqueHtmlInputNames() + "</td></tr>");
         //</Snippet171>
         //<Snippet172>
-        sb.AppendLine(TestRequiresUrlEncodedPostfieldValues());
+        sb.AppendLine("<tr><td>" + TestRequiresUrlEncodedPostfieldValues() + "</td></tr>");
         //</Snippet172>
         //<Snippet173>
-        sb.AppendLine(TestScreenBitDepth());
+        sb.AppendLine("<tr><td>" + TestScreenBitDepth() + "</td></tr>");
         //</Snippet173>
         //<Snippet174>
-        sb.AppendLine(TestScreenCharactersHeight());
+        sb.AppendLine("<tr><td>" + TestScreenCharactersHeight() + "</td></tr>");
         //</Snippet174>
         //<Snippet175>
-        sb.AppendLine(TestScreenCharactersWidth());
+        sb.AppendLine("<tr><td>" + TestScreenCharactersWidth() + "</td></tr>");
         //</Snippet175>
         //<Snippet176>
-        sb.AppendLine(TestScreenPixelsHeight());
+        sb.AppendLine("<tr><td>" + TestScreenPixelsHeight() + "</td></tr>");
         //</Snippet176>
         //<Snippet177>
-        sb.AppendLine(TestScreenPixelsWidth());
+        sb.AppendLine("<tr><td>" + TestScreenPixelsWidth() + "</td></tr>");
         //</Snippet177>
         //<Snippet178>
-        sb.AppendLine(TestScreenAccesskeyAttribute());
+        sb.AppendLine("<tr><td>" + TestScreenAccesskeyAttribute() + "</td></tr>");
         //</Snippet178>
         //<Snippet179>
-        sb.AppendLine(TestSupportsBodyColor());
+        sb.AppendLine("<tr><td>" + TestSupportsBodyColor() + "</td></tr>");
         //</Snippet179>
         //<Snippet180>
-        sb.AppendLine(TestSupportsBold());
+        sb.AppendLine("<tr><td>" + TestSupportsBold() + "</td></tr>");
         //</Snippet180>
         //<Snippet181>
-        sb.AppendLine(TestSupportsCacheControlMetaTag());
+        sb.AppendLine("<tr><td>" + TestSupportsCacheControlMetaTag() + "</td></tr>");
         //</Snippet181>
         //<Snippet182>
-        sb.AppendLine(TestSupportsCallback());
+        sb.AppendLine("<tr><td>" + TestSupportsCallback() + "</td></tr>");
         //</Snippet182>
         //<Snippet183>
-        sb.AppendLine(TestSupportsCookies());
+        sb.AppendLine("<tr><td>" + TestSupportsCookies() + "</td></tr>");
         //</Snippet183>
         //<Snippet184>
-        sb.AppendLine(TestSupportsCss());
+        sb.AppendLine("<tr><td>" + TestSupportsCss() + "</td></tr>");
         //</Snippet184>
         //<Snippet185>
-        sb.AppendLine(TestSupportsDivAlign());
+        sb.AppendLine("<tr><td>" + TestSupportsDivAlign() + "</td></tr>");
         //</Snippet185>
         //<Snippet186>
-        sb.AppendLine(TestSupportsDivNoWrap());
+        sb.AppendLine("<tr><td>" + TestSupportsDivNoWrap() + "</td></tr>");
         //</Snippet186>
         //<Snippet187>
-        sb.AppendLine(TestSupportsEmptyStringInCookieValue());
+        sb.AppendLine("<tr><td>" + TestSupportsEmptyStringInCookieValue() + "</td></tr>");
         //</Snippet187>
         //<Snippet188>
-        sb.AppendLine(TestSupportsFontColor());
+        sb.AppendLine("<tr><td>" + TestSupportsFontColor() + "</td></tr>");
         //</Snippet188>
         //<Snippet189>
-        sb.AppendLine(TestSupportsFontName());
+        sb.AppendLine("<tr><td>" + TestSupportsFontName() + "</td></tr>");
         //</Snippet189>
         //<Snippet190>
-        sb.AppendLine(TestSupportsFontSize());
+        sb.AppendLine("<tr><td>" + TestSupportsFontSize() + "</td></tr>");
         //</Snippet190>
         //<Snippet192>
-        sb.AppendLine(TestSupportsFrames());
+        sb.AppendLine("<tr><td>" + TestSupportsFrames() + "</td></tr>");
         //</Snippet192>
         //<Snippet193>
-        sb.AppendLine(TestSupportsImageSubmit());
+        sb.AppendLine("<tr><td>" + TestSupportsImageSubmit() + "</td></tr>");
         //</Snippet193>
         //<Snippet194>
-        sb.AppendLine(TestSupportsIModeSymbols());
+        sb.AppendLine("<tr><td>" + TestSupportsIModeSymbols() + "</td></tr>");
         //</Snippet194>
         //<Snippet195>
-        sb.AppendLine(TestSupportsInputIStyle());
+        sb.AppendLine("<tr><td>" + TestSupportsInputIStyle() + "</td></tr>");
         //</Snippet195>
         //<Snippet196>
-        sb.AppendLine(TestSupportsInputMode());
+        sb.AppendLine("<tr><td>" + TestSupportsInputMode() + "</td></tr>");
         //</Snippet196>
         //<Snippet197>
-        sb.AppendLine(TestSupportsItalic());
+        sb.AppendLine("<tr><td>" + TestSupportsItalic() + "</td></tr>");
         //</Snippet197>
         //<Snippet198>
-        sb.AppendLine(TestSupportsJava());
+        sb.AppendLine("<tr><td>" + TestSupportsJava() + "</td></tr>");
         //</Snippet198>
         //<Snippet199>
-        sb.AppendLine(TestSupportsJPhoneMultiMediaAttributes());
+        sb.AppendLine("<tr><td>" + TestSupportsJPhoneMultiMediaAttributes() + "</td></tr>");
         //</Snippet199>
         //<Snippet200>
-        sb.AppendLine(TestSupportsJPhoneSymbols());
+        sb.AppendLine("<tr><td>" + TestSupportsJPhoneSymbols() + "</td></tr>");
         //</Snippet200>
         //<Snippet201>
-        sb.AppendLine(TestSupportsQueryStringInFormAction());
+        sb.AppendLine("<tr><td>" + TestSupportsQueryStringInFormAction() + "</td></tr>");
         //</Snippet201>
         //<Snippet202>
-        sb.AppendLine(TestSupportsRedirectWithCookie());
+        sb.AppendLine("<tr><td>" + TestSupportsRedirectWithCookie() + "</td></tr>");
         //</Snippet202>
         //<Snippet203>
-        sb.AppendLine(TestSupportsSelectMultiple());
+        sb.AppendLine("<tr><td>" + TestSupportsSelectMultiple() + "</td></tr>");
         //</Snippet203>
         //<Snippet204>
-        sb.AppendLine(TestSupportsUncheck());
+        sb.AppendLine("<tr><td>" + TestSupportsUncheck() + "</td></tr>");
         //</Snippet204>
         //<Snippet205>
-        sb.AppendLine(TestSupportsXmlHttp());
+        sb.AppendLine("<tr><td>" + TestSupportsXmlHttp() + "</td></tr>");
         //</Snippet205>
         //<Snippet206>
-        sb.AppendLine(TestTables());
+        sb.AppendLine("<tr><td>" + TestTables() + "</td></tr>");
         //</Snippet206>
         //<Snippet207>
-        sb.AppendLine(TestType());
+        sb.AppendLine("<tr><td>" + TestType() + "</td></tr>");
         //</Snippet207>
         //<Snippet208>
-        sb.AppendLine(TestVBScript());
+        sb.AppendLine("<tr><td>" + TestVBScript() + "</td></tr>");
         //</Snippet208>
         //<Snippet209>
-        sb.AppendLine(TestVersion());
+        sb.AppendLine("<tr><td>" + TestVersion() + "</td></tr>");
         //</Snippet209>
         //<Snippet210>
-        sb.AppendLine(TestW3CDomVersion());
+        sb.AppendLine("<tr><td>" + TestW3CDomVersion() + "</td></tr>");
         //</Snippet210>
         //<Snippet211>
-        sb.AppendLine(TestWin16());
+        sb.AppendLine("<tr><td>" + TestWin16() + "</td></tr>");
         //</Snippet211>
         //<Snippet212>
-        sb.AppendLine(TestWin32());
+        sb.AppendLine("<tr><td>" + TestWin32() + "</td></tr>");
         //</Snippet212>        
         //<Snippet3>
-        return sb.ToString().Replace(Environment.NewLine, "<br />");
+        sb.AppendLine("</table>");
+
+        return sb.ToString();
     }
     //</Snippet3>
     //<Snippet300>
@@ -1250,17 +1251,58 @@
     //</Snippet412>
     // <Snippet4>        
 </script>
-<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!DOCTYPE html>
+
+<html lang="en">
 <head runat="server">
-    <title>IP Cow [Browser Capabilities]</title>
+    <script src="https://consent.cookiebot.com/uc.js" id="Cookiebot" data-cbid="2971dafb-b4e9-47af-ac6f-8be9d01c86c7" data-blockingmode="auto"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" data-blockingmode="auto"></script>
+    <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" data-ad-client="ca-pub-2167883673580425" data-blockingmode="auto" data-cookieconsent="marketing"></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-4TRHWXMJEF" data-blockingmode="auto" data-cookieconsent="statistics"></script>
+    <script data-blockingmode="auto" data-cookieconsent="statistics">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-4TRHWXMJEF');
+    </script>
+    <script src="js/ipcow.js" data-blockingmode="auto"></script>
+    <link rel="shortcut icon" media='all' type="image/x-icon" href="images/favicon.ico" />
+    <title>IP Cow [Web Browser Capabilities]</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="description" content="Here you can see the internet IP address your device is using along with information about your computer and web browser. IP Cow also offers an Ookla Speedtest and other network resources and tools.">
+    <meta name="keywords" content="ip, IP, ipv4, ipv6, address, ipaddress, ip address, speed test, dns, web browser information, what is my ip, find your ip address, ipconfig, whois">
+    <meta name="author" content="Michal Ferber">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media='all' href="css/normalize.css">
+    <link rel="stylesheet" media='all' href="css/skeleton.css">
+    <link rel="stylesheet" media='all' href="css/custom.css">
+    <link rel="stylesheet" media='all' href='//fonts.googleapis.com/css?family=Raleway&display=swap'>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            This browser has the following capabilities:
-        <br />
-            <asp:Label ID="OutputLabel" runat="server"></asp:Label>
+    <div class="header">
+        <h1><a href="/">
+            <img alt="IP Cow" src="images/background.jpg" srcset="images/background.jpg 1920w, images/background-small.jpg 602w" height="202" width="1920" /></a></h1>
+    </div>
+    <div style="padding: 10px; margin-top: 50px; text-align: center;">
+        <h2>Web Browser Capabilities</h2>
+        <p>This web browser has the following capabilities:</p>
+        <form id="form2" runat="server">
+            <asp:Literal ID="OutputLabel" runat="server"></asp:Literal>
+        </form>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="twelve column" style="margin-top: 10px; text-align: center;">
+                <p>
+                    &copy;2005-2021
+                    All Rights Reserved<br />
+                    <a href="cookies.aspx">Cookies</a> | <a href="privacy.aspx">Privacy Policy</a> | <a href="terms.aspx">Terms of Use</a><br />
+                    This is a free service provided by:<br />
+                    <a href="https://ari-integration.com/">Ari Integration LLC</a>
+                </p>
+            </div>
         </div>
-    </form>
+    </div>
 </body>
 </html>

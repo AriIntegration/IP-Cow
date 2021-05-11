@@ -10,7 +10,7 @@
     {
         StringBuilder sb = new StringBuilder();
 
-        sb.AppendLine("<table>");
+        sb.AppendLine("<table width='80%' align='center'>");
 
         foreach (string var in Request.ServerVariables)
         {
