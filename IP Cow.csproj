@@ -98,7 +98,7 @@
     <Content Include="images\favicon.png" />
     <Content Include="images\original.jpg" />
     <Content Include="js\ipcow.js" />
-    <Content Include="phpinfo.php" />
+    <Content Include="PHPinfo.aspx" />
     <Content Include="Privacy.aspx" />
     <Content Include="robots.txt" />
     <Content Include="sitemap.xml" />
@@ -134,7 +134,21 @@
     <Compile Include="Default.Master.designer.cs">
       <DependentUpon>Default.Master</DependentUpon>
     </Compile>
+    <Compile Include="IISServerVariables.aspx.cs">
+      <DependentUpon>IISServerVariables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IISServerVariables.aspx.designer.cs">
+      <DependentUpon>IISServerVariables.aspx</DependentUpon>
+    </Compile>
     <Compile Include="IPnetworking.cs" />
+    <Compile Include="PHPinfo.aspx.cs">
+      <DependentUpon>PHPinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PHPinfo.aspx.designer.cs">
+      <DependentUpon>PHPinfo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Privacy.aspx.cs">
       <DependentUpon>Privacy.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
