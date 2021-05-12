@@ -53,9 +53,9 @@
                             <td>
                                 <h6>For server or language specific information on web programming, Microsoft IIS or PHP, see the list below.<br />
                                     <br />
-                                    <a href="iisservervariables.aspx">IIS Server Variables</a>
+                                    <a href="iisservervariables.aspx">Microsoft IIS Server Variables</a>
                                     <br />
-                                    <a href="phpinfo.php">PHP Information</a>
+                                    <a href="phpinfo.aspx">PHP Information</a>
                                     <br />
                                     <a href="browsercaps.aspx">Web Browser Capabilities</a>
                                     <br />

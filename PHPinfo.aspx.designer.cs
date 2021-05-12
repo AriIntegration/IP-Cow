@@ -11,25 +11,16 @@ namespace IPCow.Website
 {
 
 
-    public partial class BrowserCaps
+    public partial class PHPinfo
     {
 
         /// <summary>
-        /// frmBrowserCaps control.
+        /// frmPHPinfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm frmBrowserCaps;
-
-        /// <summary>
-        /// OutputLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal OutputLabel;
+        protected global::System.Web.UI.HtmlControls.HtmlForm frmPHPinfo;
     }
 }
