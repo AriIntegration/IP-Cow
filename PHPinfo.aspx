@@ -14,7 +14,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <iframe width="100%" height="25500px" src="//wordpress1.ari-integration.com/info.php"></iframe>
+                                <iframe id="phpinfo" src="//wordpress1.ari-integration.com/info.php" width="100%" scrolling="no"></iframe>
                             </td>
                         </tr>
                         <tr>
@@ -27,4 +27,7 @@
             </div>
         </div>
     </form>
+<script>
+    iFrameResize({ log: false }, '#phpinfo')
+</script>
 </asp:Content>

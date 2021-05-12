@@ -97,6 +97,7 @@
     <Content Include="images\favicon.ico" />
     <Content Include="images\favicon.png" />
     <Content Include="images\original.jpg" />
+    <Content Include="js\iframeResizer.min.js" />
     <Content Include="js\ipcow.js" />
     <Content Include="PHPinfo.aspx" />
     <Content Include="Privacy.aspx" />

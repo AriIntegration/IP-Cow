@@ -12,4 +12,7 @@
 
 iframe {
     border: none;
+    width: 1px;
+    min-width: 100%;
+    overflow: hidden;
 }

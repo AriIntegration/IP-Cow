@@ -15,6 +15,7 @@
         gtag('config', 'G-4TRHWXMJEF');
     </script>
     <script src="js/ipcow.js" data-blockingmode="auto"></script>
+    <script src="js/iframeResizer.min.js" data-blockingmode="auto"></script>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="description" content="Here you can see the internet IP address your device is using along with information about your computer and web browser. IP Cow also offers an Ookla Speedtest and other network resources and tools.">
     <meta name="keywords" content="ip, IP, ipv4, ipv6, address, ipaddress, ip address, speed test, dns, web browser information, what is my ip, find your ip address, ipconfig, whois">
@@ -36,7 +37,6 @@
     <div class="container">
         <div class="row">
             <div class="twelve column" style="margin-top: 10px; text-align: center;">
-                <table class="u-full-width">
                 <p>
                     &copy;2005-<asp:Literal runat="server" ID="lblYear" />
                     All Rights Reserved<br />

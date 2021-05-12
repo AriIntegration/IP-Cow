@@ -28,7 +28,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <iframe width="100%" height="650" src="//ipcow.dualstack.speedtestcustom.com"></iframe>
+                                <iframe id="SpeedTest" src="//ipcow.dualstack.speedtestcustom.com" width="100%" height="650" scrolling="no"></iframe>
                             </td>
                         </tr>
                         <tr>
